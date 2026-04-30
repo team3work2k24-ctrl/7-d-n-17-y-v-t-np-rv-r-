@@ -13,11 +13,7 @@
             --text-color: #333;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,261 +23,184 @@
         }
 
         header {
-            background: linear-gradient(135deg, var(--primary-color), #2a6bb8);
+            background: linear-gradient(135deg, var(--primary-color), #0d2e56);
             color: white;
             text-align: center;
             padding: 3rem 1rem;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
 
         .doc-info {
             background: white;
             padding: 1.5rem;
-            border-left: 5px solid var(--accent-color);
+            border-left: 5px solid var(--secondary-color);
             border-radius: 5px;
             margin-bottom: 2rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
-        .doc-info p {
-            font-size: 0.95rem;
-            color: #555;
-            margin-bottom: 0.5rem;
-        }
+        h2 { color: var(--primary-color); margin: 2rem 0 1.5rem; text-align: center; }
 
-        h2 {
-            color: var(--primary-color);
-            margin-bottom: 1.5rem;
-            text-align: center;
-        }
-
-        /* Таблица мероприятий */
+        /* Таблица */
         .table-responsive {
             overflow-x: auto;
-            margin-bottom: 3rem;
             background: white;
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 1rem; text-align: left; border-bottom: 1px solid #eee; }
+        th { background-color: var(--primary-color); color: white; }
 
-        th, td {
-            padding: 1rem;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-
-        th {
-            background-color: var(--primary-color);
-            color: white;
-            font-weight: 600;
-        }
-
-        tr:hover {
-            background-color: #f9fbfd;
-        }
-
-        /* Секция выделенных проектов (с красными подчеркиваниями на фото) */
-        .highlight-section {
-            display: flex;
-            flex-wrap: wrap;
+        /* Секция с картинками */
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
-            margin-bottom: 3rem;
+            margin-top: 2rem;
         }
 
         .card {
             background: white;
-            flex: 1;
-            min-width: 300px;
-            border-radius: 10px;
+            border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
+            transition: 0.3s;
         }
 
-        .card:hover {
-            transform: translateY(-5px);
-        }
+        .card:hover { transform: translateY(-5px); }
 
-        .card-img {
+        .card img {
             width: 100%;
             height: 200px;
             object-fit: cover;
-            background-color: #ddd;
+            display: block;
         }
 
-        .card-content {
-            padding: 1.5rem;
-        }
-
-        .card-content h3 {
-            color: var(--secondary-color);
-            margin-bottom: 1rem;
-        }
-
-        .tags {
-            margin-top: 1rem;
-        }
+        .card-content { padding: 1.5rem; }
+        .card-content h3 { color: var(--primary-color); margin-bottom: 0.5rem; }
 
         .tag {
             display: inline-block;
             background: #eef2f5;
             color: var(--primary-color);
-            padding: 0.3rem 0.8rem;
+            padding: 0.3rem 0.7rem;
             border-radius: 20px;
-            font-size: 0.85rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 0.8rem;
+            margin: 0.2rem;
             font-weight: bold;
         }
 
-        /* Социальные сети и хештеги */
-        .social-section {
-            background: linear-gradient(135deg, var(--accent-color), #00b8c4);
+        .social-box {
+            background: var(--accent-color);
             color: white;
             text-align: center;
-            padding: 3rem 1rem;
-            border-radius: 10px;
-            margin-bottom: 2rem;
+            padding: 3rem;
+            border-radius: 12px;
+            margin-top: 3rem;
         }
 
         .hashtag {
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: bold;
             display: block;
-            margin: 1rem 0;
-            color: #fff;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 10px 0;
         }
 
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: #777;
-            border-top: 1px solid #ddd;
-            margin-top: 2rem;
-        }
+        footer { text-align: center; padding: 2rem; color: #777; margin-top: 2rem; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>"7-dən 17-yə vətənpərvər!"</h1>
-        <p>Layihəsinin keçirilməsi ilə bağlı Tədbirlər Planı</p>
+        <h1>"7-DƏN 17-YƏ VƏTƏNPƏRVƏR!"</h1>
+        <p>Tədbirlər Planı və Rəqəmsal Layihələr</p>
     </header>
 
     <div class="container">
         
         <div class="doc-info">
-            <p><strong>Sənəd:</strong> Əlavə 1. Bakı Şəhəri üzrə Təhsil İdarəsinin 14.06.2026-cı il tarixli əmri ilə təsdiq edilmişdir.</p>
-            <p><strong>Məqsəd:</strong> Şagirdlərin vətənpərvərlik ruhunda tərbiyəsi, Azərbaycanın tarixi, mədəniyyəti və qəhrəmanlarının tanıdılması.</p>
+            <p><strong>Sənəd:</strong> Bakı Şəhəri üzrə Təhsil İdarəsinin 14.06.2026-cı il tarixli əmri ilə təsdiq edilmişdir.</p>
         </div>
 
-        <h2>Tədbirlər Planı</h2>
-        
         <div class="table-responsive">
             <table>
                 <thead>
                     <tr>
-                        <th>Fəaliyyətin adı</th>
                         <th>Görüləcək işlər</th>
                         <th>İcraçılar</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Azərbaycanın dövlət rəmzləri və xüsusi günləri çərçivəsində ümumtəhsil müəssisələrində tədbirlərin təşkili</td>
-                        <td>Müzakirələr, konfranslar, açıq dərslər, sinif təşkilat saatları, seminarlar, "dəyirmi masa"lar, intellektual müsabiqələr, debatlar, ekskursiyalar, yarışlar, sosial aksiyaların və s. yaradıcı tədbirlərin keçirilməsi</td>
-                        <td>Məktəbdənkənar fəaliyyətlərin təşkili sektoru, Ümumi təhsilin təşkili sektoru, təhsil müəssisələri</td>
+                        <td>Azərbaycanın dövlət rəmzləri, tarixi və coğrafiyası ilə bağlı müzakirələr, debatlar və seminarlar</td>
+                        <td>Məktəb kollektivi</td>
                     </tr>
                     <tr>
-                        <td>İşğaldan azad olunmuş ərazilərə həsr olunmuş tədbirlərin təşkili</td>
-                        <td>Konfranslar, seminarlar, mühazirələr, "dəyirmi masa"lar, vebinarlar, ədəbi-bədii kompozisiyalar, foto və rəsm sərgilərinin və s. tədbirlərin təşkili</td>
-                        <td>Məktəbdənkənar fəaliyyətlərin təşkili sektoru, Ümumi təhsilin təşkili sektoru, təhsil müəssisələri</td>
+                        <td>Zəfər Günü və Anım Günü ilə bağlı vebinarlar, sərgilər və ekskursiyalar</td>
+                        <td>Təhsil müəssisələri</td>
                     </tr>
                     <tr>
-                        <td>Anım Günü və Zəfər Günü ilə bağlı tədbirlərin təşkili</td>
-                        <td>Konfranslar, seminarlar, mühazirələr, "dəyirmi masa"lar, vebinarlar, ədəbi-bədii kompozisiyalar, foto və rəsm sərgilərinin, ekskursiyaların, ağacəkmə aksiyalarının və s. tədbirlərin təşkili</td>
-                        <td>Məktəbdənkənar fəaliyyətlərin təşkili sektoru, Ümumi təhsilin təşkili sektoru, təhsil müəssisələri</td>
-                    </tr>
-                    <tr>
-                        <td>Azərbaycanın tarixi və coğrafiyası, mədəni abidələri, adət-ənənələri, tanınmış şəxsiyyətləri ilə bağlı tədbirlərin təşkili edilməsi</td>
-                        <td>Müzakirələr, açıq dərslər, seminarlar, "dəyirmi masa"lar, diskusiyalar, intellektual müsabiqələr, yarışların və s. tədbirlərin təşkili</td>
-                        <td>Məktəbdənkənar fəaliyyətlərin təşkili sektoru, təhsil müəssisələri</td>
+                        <td>Sosial şəbəkələrdə məlumatların paylaşılması və rəqəmsal resursların hazırlanması</td>
+                        <td>Məktəb rəhbərliyi</td>
                     </tr>
                 </tbody>
             </table>
         </div>
 
-        <h2>Xüsusi Yaradıcı və Rəqəmsal Layihələr</h2>
-        <div class="highlight-section">
+        <h2>Layihənin Əsas İstiqamətləri</h2>
+        
+        <div class="grid-section">
             
-            <!-- Карточка 1 -->
+            <!-- Карточка 1: Армия -->
             <div class="card">
-                <!-- Заглушка для фото (можно заменить ссылку на реальное изображение) -->
-                <img src="https://placehold.co/600x400/1a4d8c/ffffff?text=Yaradıcılıq+İşləri" alt="Yaradıcılıq" class="card-img">
+                <img src="https://mod.gov.az/images/news/7c4f4b9347898858e92f7f02d0800d1e.jpg" alt="Azərbaycan Ordusu">
                 <div class="card-content">
-                    <h3>Bədii və Yaradıcı İşlər</h3>
-                    <p>Rəsm, şeir, məqalə, nəsr əsərləri, multimedia resursları və s. hazırlanması. Şagirdlər tərəfindən hazırlanan digər layihələrin təhlili və uyğun layihələrin həyata keçirilməsi.</p>
+                    <h3>Zəfər Yolu</h3>
+                    <p>Ordumuzun qəhrəmanlığına və Vətən müharibəsinə həsr olunmuş tədbirlər.</p>
+                    <span class="tag">#ZəfərGünü</span>
+                    <span class="tag">#AzərbaycanOrdusu</span>
                 </div>
             </div>
 
-            <!-- Карточка 2 (С акцентом на подчеркнутый текст) -->
+            <!-- Карточка 2: Творчество -->
             <div class="card">
-                <img src="https://placehold.co/600x400/e31837/ffffff?text=Rəqəmsal+Təqdimatlar" alt="Rəqəmsal" class="card-img">
+                <img src="https://images.unsplash.com/photo-1513364776144-60967b0f800f?auto=format&fit=crop&w=500&q=80" alt="Yaradıcılıq">
                 <div class="card-content">
-                    <h3>Rəqəmsal Təqdimatlar</h3>
-                    <p>Şagirdlər tərəfindən təqdimat proqramları vasitəsilə aşağıdakı mövzularda layihələrin hazırlanması:</p>
-                    <ul style="margin-left: 20px; margin-top: 10px; margin-bottom: 10px; color: #555;">
-                        <li>"Mənim Vətənim"</li>
-                        <li>"Tarixi qəhrəmanım"</li>
-                        <li>"Azərbaycanın mədəni xəzinələri"</li>
-                    </ul>
-                    <div class="tags">
-                        <span class="tag">Rəqəmsal posterlər</span>
-                        <span class="tag">Qısa slayd təqdimatlar</span>
-                        <span class="tag">Animasiyalı infoqrafikalar</span>
-                        <span class="tag">Qrafiklər</span>
-                    </div>
+                    <h3>Yaradıcılıq İşləri</h3>
+                    <p>Rəsm, şeir, məqalə və multimedia resurslarının şagirdlər tərəfindən hazırlanması.</p>
+                    <span class="tag">#Rəsm</span>
+                    <span class="tag">#MənimVətənim</span>
                 </div>
             </div>
-            
+
+            <!-- Карточка 3: Цифровые проекты (подчеркнуто красным) -->
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80" alt="Rəqəmsal">
+                <div class="card-content">
+                    <h3>Rəqəmsal Resurslar</h3>
+                    <p>Rəqəmsal posterlər, animasiyalı infoqrafikalar və qısa slayd təqdimatlar.</p>
+                    <span class="tag">#Infoqrafika</span>
+                    <span class="tag">#Slaydlar</span>
+                </div>
+            </div>
+
         </div>
 
-        <div class="social-section">
-            <h2>Sosial Şəbəkələrdə Təbliğat</h2>
-            <p>İstedadlı şagirdlər tərəfindən Vətənimizin dünyaya tanıdılması. Elektron resursların, saytların və s. hazırlanması. Məlumatların paylaşılması üçün rəsmi həştəqlər:</p>
-            
+        <div class="social-box">
+            <h2>SOSİAL ŞƏBƏKƏLƏRDƏ PAYLAŞIN</h2>
             <span class="hashtag">#7dən17yəVətənpərvər</span>
             <span class="hashtag">#VətənimiziTanıdaq</span>
-            
-            <p style="margin-top: 1rem; opacity: 0.9;">Bu həştəqlərlə məktəblilərin hazırladığı məzmunları sosial şəbəkələrdə dəstəkləyin!</p>
+            <p>Məlumatların rəsmi həştəqlərlə paylaşılması vacibdir.</p>
         </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Bakı Şəhəri üzrə Təhsil İdarəsi. Bütün hüquqlar qorunur.</p>
+        <p>&copy; 2026 Bakı Şəhəri üzrə Təhsil İdarəsi</p>
     </footer>
 
 </body>
